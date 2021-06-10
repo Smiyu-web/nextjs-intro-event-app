@@ -17,7 +17,7 @@ const DUMMY_EVENTS = [
       location: 'Rio de Janeiro, Brazil',
       date: '2022-02-25',
       image: 'images/carnival-event.jpeg',
-      isFeatured: true,
+      isFeatured: false,
     },
     {
       id: 'e3',
