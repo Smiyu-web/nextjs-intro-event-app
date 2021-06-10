@@ -11,5 +11,19 @@
     "next": "10.2.3",
     "react": "17.0.2",
     "react-dom": "17.0.2"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "dummy-data.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andasan/m0920-nextjs-event-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andasan/m0920-nextjs-event-app/issues"
+  },
+  "homepage": "https://github.com/andasan/m0920-nextjs-event-app#readme"
 }
