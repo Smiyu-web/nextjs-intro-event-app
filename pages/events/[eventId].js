@@ -1,30 +1,38 @@
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
-import { getEventById } from '../../dummy-data'
+import { getEventById } from "../../dummy-data";
+import EventHeader from "../../components/event-detail/event-header";
+import EventLogistics from "../../components/event-detail/event-logistics";
+import EventContent from "../../components/event-detail/event-content";
 
 const EventDetailPage = () => {
-    const router = useRouter()
+  const router = useRouter();
 
-    const eventId = router.query.eventId
-    const event = getEventById(eventId)
+  const eventId = router.query.eventId;
+  const event = getEventById(eventId);
 
-    if(!event){
-        return(
-            <>
-                <p>No event found!</p>
-            </>
-        )
-    }
+  if (!event) {
+    return (
+      <>
+        <p>No event found!</p>
+      </>
+    );
+  }
 
-    return(
-        <>
-            <h1>{event.title}</h1>
-            <p>{event.date}</p>
-            <p>{event.location}</p>
-            <img src={'/' + event.image} />
-            <p>{event.description}</p>
-        </>
-    )
-}
+  return (
+    <>
+      <EventHeader title={event.title} />
+      <EventLogistics
+        date={event.date}
+        location={event.location}
+        image={event.image}
+        imageAlt={event.title}
+      ></EventLogistics>
+      <EventContent>
+        <p>{event.description}</p>
+      </EventContent>
+    </>
+  );
+};
 
-export default EventDetailPage
+export default EventDetailPage;
